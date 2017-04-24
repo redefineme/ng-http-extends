@@ -1,0 +1,6 @@
+<div class="dock-header">
+  <alert *ngFor="let alert of alerts" [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="closed($event,alert)">
+    <span [innerHtml]="alert.msg" ></span>
+  </alert>
+</div>
+

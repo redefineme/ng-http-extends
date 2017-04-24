@@ -8,7 +8,9 @@ import { HttpModule,XHRBackend ,RequestOptions} from '@angular/http';
 import { AppComponent } from './app.component';
 import { HttpExtends} from './services/http-extends';
 
+import { AlertModule ,AlertConfig} from 'ngx-bootstrap/alert'
 
+import { AlertsComponent,AlertsService} from './components/alerts/alerts.component'
 
 
 export function InterceptHttp(backend: XHRBackend, options: RequestOptions){
@@ -20,14 +22,18 @@ export function InterceptHttp(backend: XHRBackend, options: RequestOptions){
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule
   ],
   providers: [
+    AlertsService,
+    AlertConfig,
     [
       {
         provide: HttpExtends,

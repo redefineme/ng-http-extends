@@ -1,0 +1,30 @@
+.dock-header{
+  position: absolute;
+  top:0px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+}
+
+:host >>> .alert {
+  margin-bottom: 0px !important;
+  animation: intro 3s;
+  /*-webkit-animation: intro 1.5s alternate;*/
+  /*-moz-animation: intro 1.5s alternate;*/
+  /*animation-direction: alternate;*/
+  /*animation-fill-mode: forwards;*/
+}
+
+
+@keyframes intro {
+  0% {opacity: 0.3;}
+  20% {opacity: 0.7;}
+  40% {opacity: 1;}
+  60% {opacity: 1;}
+  80% {opacity: 0.7;}
+  100% {opacity: 0.3}
+}
+@keyframes end {
+  0% {opacity: 1;}
+  100% {opacity: 0.3}
+}
