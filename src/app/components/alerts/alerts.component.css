@@ -9,10 +9,8 @@
 :host >>> .alert {
   margin-bottom: 0px !important;
   animation: intro 3s;
-  /*-webkit-animation: intro 1.5s alternate;*/
-  /*-moz-animation: intro 1.5s alternate;*/
-  /*animation-direction: alternate;*/
-  /*animation-fill-mode: forwards;*/
+  -webkit-animation: intro 3s;
+  -moz-animation: intro 3s;
 }
 
 
