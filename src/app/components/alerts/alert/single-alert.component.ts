@@ -12,6 +12,8 @@ export class singleComponent implements OnInit{
 
   @Input() type:string='success';
   @Input() msg:string='undefined';
+  @Input() place?:string='right-bottom';
+  @Input() size?:string='default';
   @Input() timeout?:number;
   @Output() onClosed=new EventEmitter();
   dissmiss=true;

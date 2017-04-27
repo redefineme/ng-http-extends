@@ -15,11 +15,11 @@ export class AlertsService{
       type:alert.type || 'success',
       msg:alert.msg || 'Error',
       timeout:alert.timeout || 3000,
+      place:alert.place || 'right-bottom',
+      size:alert.size || 'default',
       dismissible:true
     })
   }
-
-
 }
 
 @Component({
@@ -27,11 +27,11 @@ export class AlertsService{
   templateUrl:'./alerts.component.html',
   styleUrls:['./alerts.component.css']
 })
-export class AlertsComponent implements OnInit{
-  // constructor(private alertsService:AlertsService){
-  constructor(private alertsService:AlertsService){
 
-  }
+
+export class AlertsComponent implements OnInit{
+
+  constructor(private alertsService:AlertsService){}
   alerts:any=[];
   queue:any=[];
   private _limit=5;
@@ -54,7 +54,6 @@ export class AlertsComponent implements OnInit{
       this.alerts.unshift(this.queue.shift());
       this._countsAlerts++;
     }
-    console.log(this.queue)
   }
 }
 

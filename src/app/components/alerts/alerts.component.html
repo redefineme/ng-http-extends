@@ -1,5 +1,5 @@
 <div class="dock-header">
-  <single-alert *ngFor="let alert of alerts" [type]="alert.type" [msg]="alert.msg" [timeout]="alert.timeout" (onClosed)="closed()">
+  <single-alert *ngFor="let alert of alerts" [type]="alert.type" [place]="alert.place" [msg]="alert.msg" [size]="alert.size" [timeout]="alert.timeout" (onClosed)="closed()">
   </single-alert>
 </div>
 
